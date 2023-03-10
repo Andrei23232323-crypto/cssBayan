@@ -34,7 +34,7 @@ img {
     transition: all 1s;
 }
 
-.accordion-tab-label {
+/*.accordion-tab-label {
     padding: 20px;
     display: block;
     border-radius: 15px;
@@ -42,9 +42,9 @@ img {
     background-color: lightgrey;
     color: #603b3b;
     transition: all 1s;
-}
+}*/
 
-.accordion-tab-label:after {
+.accordion-tab-label span:after {
     content: ">";
     float: right;
     transform: rotate(-90deg)!important;
@@ -54,11 +54,25 @@ img {
     transition: all 1s;
 }
 
-.accordion-tab:checked ~ .accordion-tab-label::after {
+.accordion-tab:checked ~ .accordion-tab-label span::after {
     transform: rotate(90deg)!important;
 }
 
-.accordion-item:hover > .content {
+.accordion-tab-label:not(:checked):hover > img {
     display: block;
     transition: all 1s;
+}
+
+.accordion-tab-label span {
+    padding: 20px;
+    display: block;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: lightgrey;
+    color: #603b3b;
+    transition: all 1s;
+}
+
+.accordion-tab-label img {
+    display: none;
 }
