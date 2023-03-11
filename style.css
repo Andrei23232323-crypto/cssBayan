@@ -58,7 +58,16 @@ img {
     transform: rotate(90deg)!important;
 }
 
-.accordion-tab-label:not(:checked):hover > img {
+/*.accordion-tab-label:not(.accordion-tab:checked):hover > img {
+    display: block;
+    transition: all 1s;
+}*/
+
+.accordion, .accordion-tab-label {
+    cursor: pointer!important;
+}
+
+.accordion-tab:not(:checked) ~ .accordion-tab-label:hover > img {
     display: block;
     transition: all 1s;
 }
